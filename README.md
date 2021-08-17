@@ -46,7 +46,7 @@ Este projeto esta sob a [MIT license](LICENSE) para mais detalhes.
 
 ## :wave: Social
 
-Siga @EddyPBR nas redes :wink:
+Siga @gabriellennon nas redes :wink:
 <br />
 
 - [Instagram](https://www.instagram.com/gabriellennon/?hl=pt-br)
