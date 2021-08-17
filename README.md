@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+#letmeask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Capa](https://user-images.githubusercontent.com/57332512/129649459-4d4a5020-b33b-43ed-8fbe-09c6e90390be.png)
 
-## Available Scripts
+## :bookmark: Resumo
+<br />
 
-In the project directory, you can run:
+Software pensado pela #Rocketseat no seu evento #NextLevelWeek, que consiste no ranqueamento de perguntas em salas da sala para que as perguntas prioritárias dos aprensetadores das lives sejam as mais ranqueadas ou seja, as dúvidas que são mais frequentes pela comunidade.
 
-### `yarn start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :bulb: Conteúdos abordados
+<br />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- NextJS
+- React
+- Sass
+- Context API's
+- React hooks
+- Firebase
+- Variáveis ambiente
 
-### `yarn test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :wrench: Colocando o projeto para rodar
+<br />
 
-### `yarn build`
+Para colocar o projeto para rodar, basta seguir o passo a passo fornecido logo abaixo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 1º: Tenha o NODE instalado na sua máquina;
+- 2º: Faça o download deste projeto;
+- 3º: Com o terminal/prompt abra o diretório deste projeto e execute o comando `npm run` ou `yarn`;
+- 4º: Enquanto executa o comando... siga o passo-a-passo para configurar o firebase neste [link-firebase](https://github.com/EddyPBR/letmeask/tree/main/.github/firebase);
+- 5º: Crie um arquivo `.env.local` no diretório raiz do projeto;
+- 6º: Copie as variaveis do arquivo `.env.example` e cole no `.env.local`, agora preencha as informações com os dados obtidos no firebase `passo 4`;
+- 7º: Após finalizado o comando do `passo 3` e com tudo finalizado, agora execute o comando `npm run dev` ou `yarn dev`;
+- 8º: Pronto tudo configurado, bora codar!;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :memo: License
 
-### `yarn eject`
+Este projeto esta sob a [MIT license](LICENSE) para mais detalhes.
+<br />
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :wave: Social
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga @gabriellennon nas redes :wink:
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Instagram](https://www.instagram.com/gabriellennon/?hl=pt-br)
+- [LinkedIn](https://www.linkedin.com/in/gabriel-lennon-79a639169/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br />
 
-## Learn More
+Siga a @Rocketeat nas redes
+<br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Website](https://rocketseat.com.br/)
+- [YouTube](https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg)
+- [Instagram](https://www.instagram.com/rocketseat_oficial/?hl=pt-br)
