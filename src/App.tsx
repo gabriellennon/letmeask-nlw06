@@ -1,7 +1,8 @@
 import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Room } from "./pages/Room";
 
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { AuthContextProvider } from './contexts/AuthContext';
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <AuthContextProvider>
+        {/* Evita que duas rotas sejam chamadas ao mesmo tempo */}
+        <Switch>
           <Route 
             path="/"
             component={Home}
@@ -19,6 +22,11 @@ function App() {
             path="/rooms/new"
             component={NewRoom}
           />
+          <Route 
+            path="/rooms/:id"
+            component={Room}
+          />
+        </Switch>
       </AuthContextProvider>
     </BrowserRouter>
   );
