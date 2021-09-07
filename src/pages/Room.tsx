@@ -8,31 +8,13 @@ import { FormEvent, useEffect, useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 import { Question } from '../components/Question';
+import { useRoom } from '../hooks/useRoom';
 
 type RoomParams = {
     id: string;
 }
 
-type FirebaseQuestions = Record<string, {
-    author: {
-        name: string;
-        avatar: string;
-    }
-    content: string;
-    isAnswered: boolean;
-    isHighlighted: boolean;
-}>
 
-type QuestionType = {
-    id: string;
-    author: {
-        name: string;
-        avatar: string;
-    }
-    content: string;
-    isAnswered: boolean;
-    isHighlighted: boolean;
-}
 
 export function Room(){
     //os parametros da minha pagina vao ficar armazenados aqui e ja tipando ela para dizer quais parametros 
@@ -40,10 +22,10 @@ export function Room(){
     const params = useParams<RoomParams>();
 
     const [newQuestion, setNewQuestion] = useState('');
-    const [questions, setQuestions] = useState<QuestionType[]>([]);
-    const [title, setTitle] = useState('');
+
     const {user} = useAuth();
     const roomId = params.id;
+    const { title, questions } = useRoom(roomId)
 
     async function handleSendQuestion(event: FormEvent){
         event.preventDefault();
@@ -74,31 +56,7 @@ export function Room(){
         setNewQuestion('')
     }
 
-    useEffect(() => {
-        //buscando os daos das perguntas
-        const roomRef = database.ref(`rooms/${roomId}`);
-        
-        //once eu escuto o evento apenas 1x, se voce varias eu colocaria apenas on
-        roomRef.on('value', room => {
-            const databaseRoom = room.val();
-            const firebaseQuestions: FirebaseQuestions = databaseRoom.questions;
-            //retorna umarray com  outro array com chave e valor
-            const parsedQuestions = Object.entries(firebaseQuestions).map(([key, value]) => {
-                return {
-                    id: key,
-                    content: value.content,
-                    author:  value.author,
-                    isHighlighted: value.isHighlighted,
-                    isAnswered: value.isAnswered
-                }
-            })
-
-            setTitle(databaseRoom.title)
-            setQuestions(parsedQuestions)
-        })
-
-        //toda vez que o id da sala mudar eu executo essa funcao novamente
-    }, [roomId]);
+   
 
     return (
         <div id="page-room">
